@@ -8,13 +8,3 @@
 # upstream dream2nix flake:
 #   nix run github:nix-community/dream2nix#detect-projects $source
 
-[eslint]
-name = "eslint"
-relPath = ""
-subsystem = "nodejs"
-translator = "package-json"
-translators = ["package-json"]
-
-[eslint.subsystemInfo]
-noDev = true
-nodejs = 18
