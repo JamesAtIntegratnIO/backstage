@@ -1,20 +1,26 @@
 {
-  description = "Backstage.io demo/playground";
-
+  description = "Flake for JavaScript and Python development";
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:nixos/nixpkgs";
     flake-utils.url = "github:numtide/flake-utils";
-    gitignore = {
-      url = "github:hercules-ci/gitignore.nix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    dream2nix.url = "github:nix-community/dream2nix";
   };
-  outputs = { self, nixpkgs, flake-utils, gitignore, dream2nix, ... }:
-    dream2nix.lib.makeFlakeOutputs {
-      systems = flake-utils.lib.defaultSystems;
-      config.projectRoot = ./.;
-      projects = ./projects.toml;
-      source = gitignore.lib.gitignoreSource ./.;
-    };
+  outputs = { self, nixpkgs, flake-utils }: 
+    flake-utils.lib.eachDefaultSystem (system:
+      let
+        pkgs = import nixpkgs { inherit system; };
+        
+      in {
+        devShell = pkgs.mkShell {
+          name = "my-project-env";
+          buildInputs = with pkgs; [
+            # Python packages
+            python39            
+
+            # JavaScript packages
+            nodejs-16_x
+            yarn
+          ];
+        };
+      }
+    );
 }
