@@ -8,3 +8,12 @@
 # upstream dream2nix flake:
 #   nix run github:nix-community/dream2nix#detect-projects $source
 
+[root]
+name = "root"
+relPath = ""
+subsystem = "nodejs"
+translator = "yarn-lock"
+translators = [ "yarn-lock", "package-json",]
+
+[root.subsystemInfo]
+workspaces = [ "packages/app", "packages/backend",]
