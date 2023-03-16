@@ -14,6 +14,7 @@
     dream2nix.lib.makeFlakeOutputs {
       systems = flake-utils.lib.defaultSystems;
       config.projectRoot = ./.;
+      projects = ./projects.toml;
       source = gitignore.lib.gitignoreSource ./.;
     };
 }
