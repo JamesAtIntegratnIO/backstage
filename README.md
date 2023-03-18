@@ -9,8 +9,8 @@ Add a token to the [github integration](https://backstage.io/docs/getting-starte
 ```yaml
 integrations:
   github:
-    - host: github.com
-	  token: ${{ insertTokenHere }}
+  - host: github.com
+    token: ${{ insertTokenHere }}
 ```
 ### Setup Oauth with github
 ```yaml
@@ -28,10 +28,10 @@ auth:
 ```yaml
 catalog:
   locations:
-    - type: file
-	  target: ../../templates/templates.yaml
-	  rules:
-	    - allow: [Templates, Template]
+  - type: file
+    target: ../../templates/templates.yaml
+    rules:
+    - allow: [Templates, Template]
 ```
 ## Running Backstage locally
 
