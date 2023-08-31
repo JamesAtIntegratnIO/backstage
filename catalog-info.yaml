@@ -15,5 +15,5 @@ spec:
   lifecycle: homeprod
   system: backstage
   dependsOn:
-    - resource/backstage-db
-    - resource/backstage-manifests
+    - resource:default/backstage-db
+    - resource:default/backstage-manifests
