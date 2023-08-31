@@ -13,3 +13,7 @@ spec:
   type: service
   owner: user:default/jamesatintegratnio
   lifecycle: homeprod
+  system: backstage
+  dependsOn:
+    - resource/backstage-db
+    - resource/backstage-manifests
