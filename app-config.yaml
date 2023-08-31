@@ -92,7 +92,7 @@ catalog:
     entityFilename: catalog-info.yaml
     pullRequestBranchName: backstage-integration
   rules:
-    - allow: [Component, System, API, Resource, Location]
+    - allow: [Component, System, API, Resource, Location, Domain, System]
   locations:
     - type: url
       target: ${BACKSTAGE_TEMPLATE_URL}
@@ -141,3 +141,6 @@ proxy:
     headers:
       Cookie:
         $env: ARGOCD_AUTH_TOKEN
+
+dependabotAlertsConfiguration:
+  severity: [ high, medium]
