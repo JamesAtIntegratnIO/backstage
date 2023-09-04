@@ -4,7 +4,7 @@ metadata:
   name: backstage
   description: Backstage Codebase
   annotations:
-    github.com/project-slug: jamesAtIntegratnIO/backstage-demo
+    github.com/project-slug: jamesAtIntegratnIO/backstage
     backstage.io/techdocs-ref: dir:.
     backstage.io/kubernetes-namespace: backstage
     backstage.io/kubernetes-label-selector: app=backstage
