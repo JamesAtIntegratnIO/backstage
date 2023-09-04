@@ -9,7 +9,6 @@ metadata:
     backstage.io/kubernetes-namespace: backstage
     backstage.io/kubernetes-label-selector: app=backstage
     argocd/app-name: backstage
-    roadie-backstage-pull-requests/default-filter: '{}'
 spec:
   type: service
   owner: user:default/jamesatintegratnio
