@@ -38,6 +38,8 @@ RUN --mount=type=cache,target=/home/node/.cache/yarn,sharing=locked,uid=1000,gid
     yarn install --frozen-lockfile --network-timeout 600000
 
 COPY --chown=node:node . .
+# Copy any other files that we need at runtime
+COPY --chown=node:node app-config.yaml ./
 
 RUN yarn tsc
 RUN yarn --cwd packages/backend build
@@ -81,9 +83,6 @@ RUN --mount=type=cache,target=/home/node/.cache/yarn,sharing=locked,uid=1000,gid
 
 # Copy the built packages from the build stage
 COPY --from=build --chown=node:node /app/packages/backend/dist/bundle/ ./
-
-# Copy any other files that we need at runtime
-COPY --chown=node:node app-config.yaml ./
 
 # This switches many Node.js dependencies to production mode.
 ENV NODE_ENV production
