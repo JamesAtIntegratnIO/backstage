@@ -4,6 +4,8 @@ This is your newly scaffolded Backstage App, Good Luck!
 
 ## Setup `app-config.local.yaml`
 
+
+
 ### Token for GitHub
 Add a token to the [github integration](https://backstage.io/docs/getting-started/configuration#setting-up-a-github-integration)
 ```yaml
