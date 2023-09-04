@@ -48,6 +48,7 @@
     "@material-ui/icons": "^4.9.1",
     "@roadiehq/backstage-plugin-argo-cd": "^2.3.2",
     "@roadiehq/backstage-plugin-github-insights": "^2.3.18",
+    "@roadiehq/backstage-plugin-github-pull-requests": "^2.5.15",
     "@roadiehq/backstage-plugin-security-insights": "^2.3.8",
     "history": "^5.0.0",
     "react": "^17.0.2",
