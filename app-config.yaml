@@ -130,7 +130,9 @@ kubernetes:
           name: homelab
           authProvider: 'serviceAccount'
           skipTLSVerify: true
+          changeOrigin: true
           skipMetricsLookup: false
+          serviceAccountToken: ${K8S_HOMELAB_SA_TOKEN}
 
 proxy:
   '/argocd/api':
