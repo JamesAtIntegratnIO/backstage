@@ -49,5 +49,8 @@
     "*.{json,md}": [
       "prettier --write"
     ]
+  },
+  "dependencies": {
+    "xml2js": "0.6.0"
   }
 }
